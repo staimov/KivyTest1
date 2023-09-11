@@ -1,0 +1,23 @@
+<MyScreenManager>:
+    MyScreen:
+
+<MyScreen>:
+    BoxLayout:
+        orientation: "vertical"
+        BoxLayout:
+            size_hint: 1,.1
+            orientation: "horizontal"
+            AddButton:
+                text:"Add"
+                on_press: self.click()
+        ScrollView:
+            GridLayout:
+                id: button_grid
+                orientation: "tb-rl"
+                size_hint_y: None
+                height: self.minimum_height
+                row_default_height: 60
+                cols:1
+
+                Label:
+                    text:"foo"
